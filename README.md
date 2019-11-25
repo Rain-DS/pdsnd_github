@@ -29,6 +29,15 @@ The Chicago and New York City files also have the following two columns:
 
 Also note that data for the project was randomly selected from the first 6 months of 2017 for all three cities. Feel free to use as much data as you desire to test run the project on your terminal.
 
+### Contribution
+For now, the project only calculates data relating to the following broad questions:
+- Popular times of travel (i.e., occurs most often in the start time)
+- Popular stations and trip
+- Trip duration
+- User info
+
+Feel free to expand upon the solutions provided by the project through your contributions. If your desired contribution provides solutions to a broad new section, define your overall solution in a function and add it to the main function. If you are simply answering more questions within an existing broad section, include your code in the function defined for that broad question/section.
+
 ### Credits
 Udacity Python for Data Science Nanodegree Program
 
