@@ -15,6 +15,20 @@ The project uses wrangled data stored in the following files:
 
 You can access raw data used for the project [here](https://www.capitalbikeshare.com/system-data).
 
+For data wrangling purposes, note that the core data that forms the base of this experiment includes the following columns in all 3 city files:
+- Start Time (e.g., 2017-01-01 00:07:57)
+- End Time (e.g., 2017-01-01 00:20:53)
+- Trip Duration (in seconds - e.g., 776)
+- Start Station (e.g., Broadway & Barry Ave)
+- End Station (e.g., Sedgwick St & North Ave)
+- User Type (Subscriber or Customer)
+
+The Chicago and New York City files also have the following two columns:
+- Gender
+- Birth Year
+
+Also note that data for the project was randomly selected from the first 6 months of 2017 for all three cities. Feel free to use as much data as you desire to test run the project on your terminal.
+
 ### Credits
 Udacity Python for Data Science Nanodegree Program
 
