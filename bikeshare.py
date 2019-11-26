@@ -141,7 +141,7 @@ def station_stats(df):
     combo_list = list(zip(start_list, end_list))
     print('\nThe most frequent combination of start station and end station is:', md(combo_list))
 
-    print("\nThis took {} seconds.".format((time.time() - start_time)))
+    print("\nThis took %s seconds." %(time.time() - start_time))
     print('-'*40)
 
 
@@ -152,10 +152,10 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # Display total travel time in minutes
-    print('Users spent a total travel time of {} minutes on the road.\n'.format((df['Trip Duration'].sum())/60))
+    print('Users spent a total travel time of %f minutes on the road.\n' %((df['Trip Duration'].sum())/60))
 
     # Display mean travel time in minutes
-    print('On average, users spent {} minutes per travel.\n'.format((df['Trip Duration'].mean())/60))
+    print('On average, users spent %f minutes per travel.\n' %((df['Trip Duration'].mean())/60))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
