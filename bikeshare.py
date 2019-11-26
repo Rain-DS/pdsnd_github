@@ -108,14 +108,12 @@ def time_stats(df, month, day):
         
     # Display the most common day of week if no day filter was applied
     if day == 'All':
-        most_freq_day = df['day_of_week'].mode()[0]
-        print('\nThe most frequent day of travel is:', most_freq_day)
+        print('\nThe most frequent day of travel is:', df['day_of_week'].mode()[0])
     else:
         print('\nCannot calculate most frequent day when dataset is filtered by just one day.')
 
     # Display the most common start hour
-    most_freq_hour = df['start_hour'].mode()[0]
-    print('\nThe most frequent start hour is:', most_freq_hour)
+    print('\nThe most frequent start hour is:', df['start_hour'].mode()[0])
 
     print("\nThis took %s seconds to calculate." % (time.time() - start_time))
     print('-'*40)
@@ -128,12 +126,10 @@ def station_stats(df):
     start_time = time.time()
 
     # Display most commonly used start station
-    most_freq_start_stn = df['Start Station'].mode()[0]
-    print('\nThe most commonly used start station is:', most_freq_start_stn)
+    print('\nThe most commonly used start station is:', df['Start Station'].mode()[0])
 
     # Display most commonly used end station
-    most_freq_end_stn = df['End Station'].mode()[0]
-    print('\nThe most commonly used end station is:', most_freq_end_stn)
+    print('\nThe most commonly used end station is:', df['End Station'].mode()[0])
 
     # Display most frequent combination of start station and end station trip
     start_list = list(df['Start Station'])
@@ -141,7 +137,7 @@ def station_stats(df):
     combo_list = list(zip(start_list, end_list))
     print('\nThe most frequent combination of start station and end station is:', md(combo_list))
 
-    print("\nThis took {} seconds.".format((time.time() - start_time)))
+    print("\nThis took %s seconds." %(time.time() - start_time))
     print('-'*40)
 
 
@@ -152,10 +148,10 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # Display total travel time in minutes
-    print('Users spent a total travel time of {} minutes on the road.\n'.format((df['Trip Duration'].sum())/60))
+    print('Users spent a total travel time of %f minutes on the road.\n' %((df['Trip Duration'].sum())/60))
 
     # Display mean travel time in minutes
-    print('On average, users spent {} minutes per travel.\n'.format((df['Trip Duration'].mean())/60))
+    print('On average, users spent %f minutes per travel.\n' %((df['Trip Duration'].mean())/60))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
